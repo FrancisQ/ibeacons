@@ -12,6 +12,7 @@
 		B73609131DDF7FD2002487B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B73609111DDF7FD2002487B9 /* Main.storyboard */; };
 		B73609151DDF7FD2002487B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B73609141DDF7FD2002487B9 /* Assets.xcassets */; };
 		B73609181DDF7FD2002487B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B73609161DDF7FD2002487B9 /* LaunchScreen.storyboard */; };
+		B75BA0CC1DE3E1D9007CEA8F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75BA0CB1DE3E1D9007CEA8F /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		B73609141DDF7FD2002487B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B73609171DDF7FD2002487B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B73609191DDF7FD2002487B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B75BA0CB1DE3E1D9007CEA8F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B75BA0CF1DE3E308007CEA8F /* ibeacons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ibeacons.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75BA0CC1DE3E1D9007CEA8F /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				B736090C1DDF7FD2002487B9 /* ibeacons */,
 				B736090B1DDF7FD2002487B9 /* Products */,
+				B75BA0CA1DE3E1D9007CEA8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		B736090C1DDF7FD2002487B9 /* ibeacons */ = {
 			isa = PBXGroup;
 			children = (
+				B75BA0CF1DE3E308007CEA8F /* ibeacons.entitlements */,
 				B736090D1DDF7FD2002487B9 /* AppDelegate.swift */,
 				B736090F1DDF7FD2002487B9 /* ViewController.swift */,
 				B73609111DDF7FD2002487B9 /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				B73609191DDF7FD2002487B9 /* Info.plist */,
 			);
 			path = ibeacons;
+			sourceTree = "<group>";
+		};
+		B75BA0CA1DE3E1D9007CEA8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B75BA0CB1DE3E1D9007CEA8F /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +112,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = G9M8ANKNN7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -302,6 +321,7 @@
 				B736091E1DDF7FD2002487B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
